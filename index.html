@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>-= ericulicny.com =-</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+  <!-- <div id=main> -->
+  <div id="top"><br />
+    <div id="logo"></div>
+    <div id="menu-bar">
+    	<a href="index.html">Home</a>
+        <a href="about.php">About</a>
+    </div>
+  </div>
+  <div id="bar"></div>
+  <div id="lg_disp">	<br />
+    <br />
+  	<center>
+  	  <p>&nbsp;</p>
+  	</center>
+  </div>
+  <div id="bar"></div>
+  <div id="content_pane"><br />
+	<center><h1>Welcome!</h1></center><br>
+	<div id=summary>
+		My name is Eric Ulicny and I am a software engineer.  I created this website to showcase some of my personal, and academic projects. I have divided my projects into several categories as you can see below.
+	</div><br><br>
+      <center><h1>Projects</h1></center><br>
+      <div id=summary>
+          I have a wide range of technical interests.  From Java and FGPA's to Linux System administration. Below are some of the projects which show-case my work.<p>Future Projects:<br><ul><li>Quadrocoptor Design</li><li>AI Simulation</li><li>Home Statistics</li></ul>
+      </div>
+  	<div id="project_row">    	
+    	<span id="project">
+            <div class="icon">
+                <div class="icon_text">Software Projects</div>
+            </div>
+        </span>
+
+        <span id="project">
+            <div class="icon">
+                <div class="icon_text">Hardware Projects</div>
+            </div>
+        </span>
+
+        <span id="project">
+            <div class="icon">
+                <div id="proj_infra" class="icon_text">Infrastructure Projects</div>
+            </div>
+        </span>
+
+    </div>
+
+<script>
+	$(".icon_text").on('click', function() {
+		if($(this).text() == "Infrastructure Projects") {
+			window.location.href = "infra.php";
+		}
+	})
+	.hover(function() {
+		$(this).css('color', '#505050');	
+	},
+	function() {
+		$(this).css('color', '#FFFFFF');	
+	});
+</script>
+  
+  <div id="footer">(c) 2013 EricUlicny.com</div>
+
+</div>
+</body>
+</html>
