@@ -31,8 +31,11 @@
 	Current projects in this area:  Sun Tray.<br><br><br><hr>
 
 	<br><br><br>
-	<h2>Sun Tray</h2><br>
-	Sun Tray is a program written in Java as an application which displays information about the Sunset in the OSX tray.  Information such as time until sunset, time until sunrise, and tomorrows length of day.
+	<center><h2>Sun Tray</h2></center><br>
+	<p>
+	Sun Tray is a program written in Java which displays information about the Sunset in the OSX tray.  Information such as time until sunset, time until sunrise, and tomorrows length of day. Big hurdles in the development of this application were implementing the Sunset Algorithm (http://williams.best.vwh.net/sunrise_sunset_algorithm.htm) and learning how to create a Java OSX Application.</p>
+	Check out the project at https://github.com/Xsixteen/SunTray
+
       </div>
 
   
