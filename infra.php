@@ -25,7 +25,7 @@
   </div>
   <div id="bar"></div>
   <div id="content_pane"><br />
-      <center><h1>Projects</h1></center><br>
+      <center><h1>Infrastructure Projects</h1></center><br>
       <div id=summary>
       	Infrastructure projects relate to utilizing the Linux Operating System, scalability, virtualization, and code pushing processes.<br><br>
 	Current projects in this area:  roll tool.<br><br><br><hr>

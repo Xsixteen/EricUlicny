@@ -25,13 +25,13 @@
   </div>
   <div id="bar"></div>
   <div id="content_pane"><br />
-      <center><h1>Projects</h1></center><br>
+      <center><h1>Hardware Projects</h1></center><br>
       <div id=summary>
-      	Infrastructure projects relate to utilizing the Linux Operating System, scalability, virtualization, and code pushing processes.<br><br>
-	Current projects in this area:  roll tool.<br><br><br><hr>
+      	Hardware projects relate to utilizing various types of hardware such as FPGA, Microprocessors, and Arduino.<br><br>
+	Current projects in this area:  FPGA Asteroids.<br><br><br><hr>
 
 	<br><br><br>
-	<h2>Roll Tool</h2>
+	<h2>FPGA Asteroids</h2>
       </div>
 
   
