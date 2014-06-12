@@ -1,0 +1,9 @@
+body {
+	padding-top: 70px;
+	padding-bootom: 30px;
+}
+
+a.header {
+	text-decoration: none;
+	color: black;
+}
