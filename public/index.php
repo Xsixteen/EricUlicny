@@ -7,13 +7,12 @@
         $app = new \Slim\App;
 
         //Routes
+        require '../src/routes/main.php';
         $app->get('/hello/{name}', function (Request $request, Response $response, $args) {
                 return $response->write("Hello " . $args['name']);
         });
 
-        $app->get('/', function (Request $request, Response $response, $args) {
-                return $response->write("Main Page!  Hello World");
-        });
+       
 
         $app->run();
 ?>
