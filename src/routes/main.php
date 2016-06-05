@@ -5,7 +5,7 @@
         $app->get('/', function (Request $request, Response $response, $args) {
                 return $this->view->render($response, 'home.twig',
                         [
-                                'title' => 'Eric Ulicny'
+                                'title' => 'EricUlicny.com'
                         ]);
         });
         
