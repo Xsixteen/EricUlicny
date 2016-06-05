@@ -3,18 +3,20 @@
         use \Psr\Http\Message\ResponseInterface as Response;
 
         require '../vendor/autoload.php';
-
+        require '../src/config.php';
+        
         $app = new \Slim\App;
         //Setup Extensions
+        $c = new \Slim\Container($configuration);
         $container = $app->getContainer();
         $container['view'] = function($c) {
                 $view = new \Slim\Views\Twig('../templates', ['debug' => true]);
                 $view->addExtension(
                 new \Slim\Views\TwigExtension(
-                        $c['router']
-                ,$c['request']->getUri()
-                )
+                                $c['router'],
+                                $c['request']->getUri())
                 );
+                
                 $view->addExtension( new \Slim\Views\TwigExtension($c->get('router'), $c->get('request')->getUri()) );
                 $view->addExtension( new \Twig_Extension_Debug() );
                 return $view;
