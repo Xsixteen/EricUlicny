@@ -5,6 +5,9 @@
         require '../vendor/autoload.php';
         require '../src/config.php';
         
+        //enable file logging
+        $logWriter = new \Slim\LogWriter(fopen('/var/www/stage/ericulicny/slimlogs', 'a'));
+        
         $app = new \Slim\App;
         //Setup Extensions
         $c = new \Slim\Container($configuration);
@@ -29,8 +32,10 @@
         $app->get('/hello/{name}', function (Request $request, Response $response, $args) {
                 return $response->write("Hello " . $args['name']);
         });
-
-       
+    
+        $app->error(function (\Exception $e) use ($app) {
+                $app->render('Error: ' + $e);     
+        });
         //run!
         $app->run();
 ?>
