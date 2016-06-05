@@ -24,7 +24,8 @@
         
         //Routes
         require '../src/routes/main.php';
-        
+        require '../src/routes/panel.php';
+
         //testing
         $app->get('/hello/{name}', function (Request $request, Response $response, $args) {
                 return $response->write("Hello " . $args['name']);
