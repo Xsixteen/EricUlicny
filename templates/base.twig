@@ -1,0 +1,80 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Eric Ulicny">
+
+  <title>{{ title }}</title>
+
+  {% block stylesheets %}
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/components-font-awesome/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Leckerli+One" />
+  {% endblock %}
+</head>
+
+<body>
+
+<!-- navigation -->
+{% include 'fragments/navigation.twig' %}
+<!-- /navigation -->
+
+<!-- content -->
+<div class="pre-content">
+  {% block precontent %} {% endblock %}
+</div>
+
+<div class="main-content">
+  {% block content %} {% endblock %}
+</div> <!-- /main-content -->
+
+{% block footer %}
+  <footer class="footer" style="padding-top: 15px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-xs-12">
+          <h1>Aomori AJET</h1>
+          <p>We do all the cool things.<br/>Keep it <span id="classy">classy</span></p>
+          <img src="/img/classyaf.jpg" id="classyimg" style="display: none"/>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="list-group">
+            <a href="//facebook.com/aomoriajet" class="list-group-item">
+              <i class="fa fa-facebook-square"></i>FACEBOOK
+            </a>
+            <a href="//instagram.com/aomori_ajet" class="list-group-item">
+              <i class="fa fa-instagram"></i>INSTAGRAM
+            </a>
+            <a href="//twitter.com/aomori_ajet" class="list-group-item">
+              <i class="fa fa-twitter-square"></i>TWITTER
+            </a>
+          </div> <!-- /SNS links -->
+        </div>
+      </div>
+    </div>
+  </footer>
+{% endblock %}
+
+{% block scripts %}
+  <script type="application/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+  <script type="application/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="application/javascript">
+  $(document).ready(function() {
+      var img = $('#classyimg');
+    $('#classy').mouseover(function(e) {
+      img.stop(1, 1).fadeIn();
+      img.offset({
+        top: e.pageY - img.outerHeight(),
+        left: e.pageX - (img.outerWidth()/2)
+      });
+    }).mouseout(function() {
+      img.fadeOut();
+    })
+  })
+  </script>
+{% endblock %}
+</body>
+</html>

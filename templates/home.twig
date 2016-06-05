@@ -1,0 +1,63 @@
+{% extends 'base.twig' %}
+
+{% block precontent %}
+  <!-- start spalsh screen -->
+  <div class="splash">
+    <div class="splash-message">
+      <h1>Aomori AJET</h1>
+      <h3>Your one-stop-shop for everything AJET</h3>
+      <h5>Follow Us:</h5>
+      <ul class="list-inline social-list">
+        <li>
+        <a href="//facebook.com/aomoriajet" class="btn btn-default btn-lg">
+          <i class="fa fa-facebook-square"></i>
+          <span class="hidden-xs hidden-sm sns">FACEBOOK</span>
+        </a>
+        </li>
+        <li>
+        <a href="//instagram.com/aomori_ajet" class="btn btn-default btn-lg">
+          <i class="fa fa-instagram"></i>
+          <span class="hidden-xs hidden-sm sns">INSTAGRAM</span>
+        </a>
+        </li>
+        <li>
+        <a href="//twitter.com/aomori_ajet" class="btn btn-default btn-lg">
+          <i class="fa fa-twitter-square"></i>
+          <span class="hidden-xs hidden-sm sns">TWITTER</span>
+        </a>
+        </li>
+      </ul> <!-- /SNS links -->
+    </div> <!-- /spash-message -->
+    <a class="explore-more" id="more" data-tag="news"><i class="fa fa-arrow-down fa-lg"></i></a>
+  </div> <!-- /spash -->
+{% endblock %}
+
+{% block content %}
+  {# DEBUG -- dump all variables
+  <section> <pre>{{ dump() }}</pre> </section>
+  #}
+  <section id="section-posts">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="page-header">
+            <h1 id="news">Latest News <small>Along with Other Related Things</small></h1>
+          </div>
+          {% for post in posts %}
+            <div class="media">
+              <div class="media-left">
+                <a href="#"><img class="media-object" src="{{ post.imageUrl }}" /></a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"></small></h4>
+                <p></p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}
