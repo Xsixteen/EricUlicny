@@ -15,9 +15,9 @@
         $container['view'] = function($c) {
                 $view = new \Slim\Views\Twig('../templates', ['debug' => true]);
                 $view->addExtension(
-                new \Slim\Views\TwigExtension(
-                                $c['router'],
-                                $c['request']->getUri())
+                        new \Slim\Views\TwigExtension(
+                                        $c['router'],
+                                        $c['request']->getUri())
                 );
                 
                 $view->addExtension( new \Slim\Views\TwigExtension($c->get('router'), $c->get('request')->getUri()) );
