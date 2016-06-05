@@ -35,22 +35,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-xs-12">
-          <h1>Aomori AJET</h1>
-          <p>We do all the cool things.<br/>Keep it <span id="classy">classy</span></p>
-          <img src="/img/classyaf.jpg" id="classyimg" style="display: none"/>
-        </div>
-        <div class="col-md-4 col-xs-12">
-          <div class="list-group">
-            <a href="//facebook.com/aomoriajet" class="list-group-item">
-              <i class="fa fa-facebook-square"></i>FACEBOOK
-            </a>
-            <a href="//instagram.com/aomori_ajet" class="list-group-item">
-              <i class="fa fa-instagram"></i>INSTAGRAM
-            </a>
-            <a href="//twitter.com/aomori_ajet" class="list-group-item">
-              <i class="fa fa-twitter-square"></i>TWITTER
-            </a>
-          </div> <!-- /SNS links -->
+          <h4>Stub!</h4>
         </div>
       </div>
     </div>
@@ -60,20 +45,6 @@
 {% block scripts %}
   <script type="application/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
   <script type="application/javascript" src="./js/bootstrap.min.js"></script>
-  <script type="application/javascript">
-  $(document).ready(function() {
-      var img = $('#classyimg');
-    $('#classy').mouseover(function(e) {
-      img.stop(1, 1).fadeIn();
-      img.offset({
-        top: e.pageY - img.outerHeight(),
-        left: e.pageX - (img.outerWidth()/2)
-      });
-    }).mouseout(function() {
-      img.fadeOut();
-    })
-  })
-  </script>
 {% endblock %}
 </body>
 </html>
