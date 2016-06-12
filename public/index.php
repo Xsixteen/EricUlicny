@@ -35,6 +35,7 @@
         //Routes
         require '../src/routes/main.php';
         require '../src/routes/panel.php';
+        require '../src/routes/projects.php';
 
         //testing
         $app->get('/hello/{name}', function (Request $request, Response $response, $args) {
