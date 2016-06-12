@@ -1,0 +1,31 @@
+{% extends 'base.twig' %}
+
+
+{% block precontent %}
+  <!-- start spalsh screen -->
+  <div class="splash">
+    <div class="splash-message">
+      <h1>EricUlicny.com Rev3</h1>   
+    </div> <!-- /spash-message -->
+    <a class="explore-more" id="more" data-tag="news"><i class="fa fa-arrow-down fa-lg"></i></a>
+  </div> <!-- /spash -->
+{% endblock %}
+
+{% block content %}
+  {# DEBUG -- dump all variables
+  <section> <pre>{{ dump() }}</pre> </section>
+  #}
+  <section id="section-posts">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="page-header">
+            <h1 id="news">Latest News <small>This is a Stub!</small></h1>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}

@@ -3,6 +3,7 @@
         use \Psr\Http\Message\ResponseInterface as Response;
         
         $app->get('/', function (Request $request, Response $response, $args) {
+
                 return $this->view->render($response, 'home.twig',
                         [
                                 'title' => 'EricUlicny.com'

@@ -1,0 +1,3 @@
+
+INSERT INTO projects WHERE ('MegaCrypt', 'Megacrypt is a utility I created to solve password management. Support for functionality includes maintaining a offline flatfile store, create, edit, and delete functionality. The program utilizes AES encryption', 'Java', '', 'software');
+INSERT INTO projects WHERE ('Suntray', 'Sun Tray displays information about the Sunset in the OSX tray. Information such as time until sunset, time until sunrise, and tomorrows length of day. One big hurdles in the development of this application were implementing the Sunset Algorithm (http://williams.best.vwh.net/sunrise_sunset_algorithm.htm) and learning how to create a Java OSX Application. ', 'Java', 'https://github.com/Xsixteen/SunTray', 'software');
