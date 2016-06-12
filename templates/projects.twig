@@ -25,6 +25,19 @@
           </div>
         </div>
       </div>
+      <div class="row">
+
+      {% if current_events|length > 0 %}
+        <ul>
+          {% for project in projects %}
+            <li>
+              <b>{{ project.name }}</b><br/>
+              {{ project.description }}
+            </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
 
     </div>
   </section>
