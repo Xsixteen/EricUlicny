@@ -3,6 +3,8 @@
 
     use \Model\Project;
 
+    use PDO;
+
     class ProjectMapper extends AbstractMapper implements IDataMapper {    
 
         public function get($id) {}
