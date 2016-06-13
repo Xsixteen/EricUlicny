@@ -25,7 +25,7 @@
         //Database setup
         $container['db'] = function($c) {
                 $db = $c['settings']['db'];
-                $dbconn = sprintf('pgsql:dbname=%s;host=%s', $db['dbname'], $db['host']);
+                $dbconn = sprintf('mysql:dbname=%s;host=%s', $db['dbname'], $db['host']);
                 $pdo = new PDO($dbconn, $db['username'], $db['password']);
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
