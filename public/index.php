@@ -1,13 +1,14 @@
 <?php
         use \Psr\Http\Message\ServerRequestInterface as Request;
         use \Psr\Http\Message\ResponseInterface as Response;
-        
+
         require_once '../src/config.php';
         require '../src/vendor/autoload.php';
         
-        $app = new \Slim\App;
         //Setup Extensions
         $c = new \Slim\Container($configuration);
+        $app = new \Slim\App($c);
+
         $container = $app->getContainer();
         $container['view'] = function($c) {
                 $view = new \Slim\Views\Twig('../templates', ['debug' => true]);
