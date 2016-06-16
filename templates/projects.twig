@@ -11,31 +11,35 @@
   #}
   <section id="section-posts">
     <div class="container">
-    
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="page-header">
-            <h1 id="news">Latest News <small>This is a Stub!</small></h1>
+      <div class="projects-div">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="page-header">
+              <h1 id="news">Projects</h1>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
+        <div class="row">
 
-      {% if projects|length > 0 %}
-        <ul>
-          {% for project in projects %}
-            <li>
-              <b>{{ project.name }}</b><br/>
-              {{ project.description }}
-            </a>
-            </li>
-          {% endfor %}
-        </ul>
-        {% else %}
-          No Projects!
-        {% endif %}
+        {% if projects|length > 0 %}
+          <h2>Software</h2>
+          <ul>
+            {% for project in projects %}
+              {% if project.type == "software" %}
+                <li>
+                  <b>{{ project.name }}</b><br/>
+                  {{ project.description }}<br/>
+                  <b>URL:</b> {{ project.url }}
+                </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          {% else %}
+            No Projects!
+          {% endif %}
+        </div>
       </div>
-
     </div>
   </section>
 {% endblock %}
