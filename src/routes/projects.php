@@ -12,7 +12,8 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
             return $this->view->render($response, 'projects.twig',
                     [
-                            'title' => 'EricUlicny.com Projects'
+                            'title'     => 'EricUlicny.com Projects',
+                            'projects'  => $projects
                     ]);
     });
 
