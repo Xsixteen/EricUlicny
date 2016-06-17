@@ -15,14 +15,14 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="page-header">
-              <h1 id="news">Projects</h1>
+              <center><h1 id="news">Projects</h1></center>
             </div>
           </div>
         </div>
         <div class="row">
 
         {% if projects|length > 0 %}
-          <h2>Software</h2>
+          <h3>Software</h3>
           <ul>
             {% for project in projects %}
               {% if project.type == "software" %}
