@@ -29,7 +29,7 @@
                 <li>
                   <b>{{ project.name }}</b><br/>
                   {{ project.description }}<br/>
-                  <b>URL:</b> {{ project.url }}
+                  <b>URL:</b> <a href="{{ project.url }}">{{ project.url }}</a>
                 </a>
                 </li>
               {% endif %}
