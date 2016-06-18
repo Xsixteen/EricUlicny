@@ -37,11 +37,7 @@
         require '../src/routes/main.php';
         require '../src/routes/panel.php';
         require '../src/routes/projects.php';
-
-        //testing
-        $app->get('/hello/{name}', function (Request $request, Response $response, $args) {
-                return $response->write("Hello " . $args['name']);
-        });
+        require '../src/routes/about.php';
    
         //run!
         $app->run();
