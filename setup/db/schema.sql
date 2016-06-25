@@ -6,5 +6,6 @@ CREATE TABLE projects (
     description varchar(2500),
     languages varchar(256),
     url varchar(100),
-    type varchar(100)
+    type varchar(100),
+    screenshot varchar(50)
 );

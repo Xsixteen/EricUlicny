@@ -27,7 +27,7 @@
             {% for project in projects %}
               {% if project.type == "software" %}
                 <li>
-                  <b>{{ project.name }}</b><br/>
+                  <h4>{{ project.name }}</h4><br/>
                   {{ project.description }}<br/>
                   <b>URL:</b> <a href="{{ project.url }}">{{ project.url }}</a>
                 </a>
