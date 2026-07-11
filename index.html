@@ -1,84 +1,1157 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>EricUlicny.com</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Ulicny — Software Engineer & Builder</title>
+  <meta name="description"
+    content="Eric Ulicny's portfolio — software engineer building tools for fintech, IoT, data pipelines, and creative tech." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-<div id="wrapper">
-  <!-- <div id=main> -->
-  <div id="top"><br />
-    <div id="logo"></div>
-    <div id="menu-bar">
-    	<a href="index.html">Home</a>
-        <a href="about.php">About</a>
+  <!-- Ambient background blobs -->
+  <div class="ambient-bg" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ─── Navigation ─── -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">eric.ulicny</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#tech">Tech Stack</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://github.com/Xsixteen" target="_blank" rel="noopener">GitHub ↗</a></li>
+      </ul>
     </div>
-  </div>
-  <div id="bar"></div>
-  <div id="lg_disp">	<br />
-    <br />
-  	<center>
-  	  <p>&nbsp;</p>
-  	</center>
-  </div>
-  <div id="bar"></div>
-  <div id="content_pane"><br />
-	<center><h1>Welcome!</h1></center><br>
-	<div id=summary>
-		My name is Eric Ulicny and I am a software engineer.  I created this website to showcase some of my personal, and academic projects. I have divided my projects into several categories as you can see below.
-	</div><br><br>
-      <center><h1>Projects</h1></center><br>
-      <div id=summary>
-          I have a wide range of technical interests.  From Java and FGPA's to Linux System administration. Below are some of the projects which show-case my work.<p>Future Projects:<br><ul><li>Quadrocoptor Design</li><li>AI Simulation</li><li>Home Monitoring</li></ul>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Building things that matter
       </div>
-  	<div id="project_row">    	
-    	<span id="project">
-            <div class="icon">
-                <div class="icon_text">Software Projects</div>
-            </div>
-        </span>
-
-        <span id="project">
-            <div class="icon">
-                <div class="icon_text">Hardware Projects</div>
-            </div>
-        </span>
-
-        <span id="project">
-            <div class="icon">
-                <div id="proj_infra" class="icon_text">Infrastructure Projects</div>
-            </div>
-        </span>
-
+      <h1>
+        I build software<br />
+        <span class="gradient-text">that solves real problems.</span>
+      </h1>
+      <p>
+        Software engineer exploring the intersections of fintech, IoT, data engineering, and creative tech.
+        From macOS menu bar utilities to ML-driven stock analysis — I ship things.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+          </svg>
+          View Projects
+        </a>
+        <a href="https://github.com/Xsixteen" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.42-1.305.762-1.605-2.665-.3-5.467-1.332-5.467-5.93 0-1.31.468-2.382 1.235-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.5 11.5 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.838 1.234 1.91 1.234 3.22 0 4.61-2.807 5.625-5.48 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .322.216.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z" />
+          </svg>
+          GitHub
+        </a>
+      </div>
     </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M12 5v14M19 12l-7 7-7-7" />
+      </svg>
+    </div>
+  </header>
 
-<script>
-	$(".icon_text").on('click', function() {
-		if($(this).text() == "Infrastructure Projects") {
-			window.location.href = "infra.php";
-		}
+  <!-- ─── Projects Section ─── -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">All Public Projects</h2>
+        <p class="section-subtitle">Every public repo from my GitHub — spanning fintech, IoT, systems, creative, and
+          more.</p>
+      </div>
 
-		if($(this).text() == "Software Projects") {
-			window.location.href = "software.php";
-		}
+      <!-- Filter Pills -->
+      <div class="filter-bar reveal" id="filter-bar">
+        <button class="filter-pill active" data-filter="all">All <span class="pill-count">35</span></button>
+        <button class="filter-pill" data-filter="fintech">Fintech</button>
+        <button class="filter-pill" data-filter="tools">Desktop & CLI</button>
+        <button class="filter-pill" data-filter="data">Data & Infra</button>
+        <button class="filter-pill" data-filter="iot">IoT & Hardware</button>
+        <button class="filter-pill" data-filter="creative">Creative</button>
+        <button class="filter-pill" data-filter="ai">AI & ML</button>
+        <button class="filter-pill" data-filter="systems">Systems</button>
+        <button class="filter-pill" data-filter="web">Web & Dashboards</button>
+      </div>
 
-		if($(this).text() == "Hardware Projects") {
-			window.location.href = "hardware.php";
-		}
-	})
-	.hover(function() {
-		$(this).css('color', '#505050');	
-	},
-	function() {
-		$(this).css('color', '#FFFFFF');	
-	});
-</script>
-  
-  <div id="footer">(c) 2013 EricUlicny.com</div>
+      <!-- Project Grid -->
+      <div class="projects-grid stagger" id="projects-grid">
 
-</div>
+        <!-- Stock Analysis Engine -->
+        <a href="https://github.com/Xsixteen/Stock-Analysis-Engine" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="fintech ai">
+          <div class="card-header">
+            <div class="card-icon fintech">📊</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Stock Analysis Engine</h3>
+            <p class="card-description">Screens event catalysts to pick tickers for sector-balanced credit spread plans.
+              Multi-stage pipeline with Gemini AI analysis.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Gemini AI</span>
+            <span class="tag">Pipelines</span>
+          </div>
+        </a>
+
+        <!-- StockDash -->
+        <a href="https://github.com/Xsixteen/StockDash" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="fintech web">
+          <div class="card-header">
+            <div class="card-icon fintech">💹</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">StockDash</h3>
+            <p class="card-description">Stock tracking and analysis dashboard for visualizing market data and monitoring
+              portfolio performance.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Dashboard</span>
+            <span class="tag">Finance</span>
+          </div>
+        </a>
+
+        <!-- StockFlux -->
+        <a href="https://github.com/Xsixteen/StockFlux" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="fintech web">
+          <div class="card-header">
+            <div class="card-icon fintech">📈</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">StockFlux</h3>
+            <p class="card-description">Stock flux analysis application for tracking price movements and identifying
+              market patterns.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">Analysis</span>
+          </div>
+        </a>
+
+        <!-- StockInsights -->
+        <a href="https://github.com/Xsixteen/StockInsights" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="fintech">
+          <div class="card-header">
+            <div class="card-icon fintech">🔍</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">StockInsights</h3>
+            <p class="card-description">Stock market insights platform for deeper analysis and trend discovery.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Finance</span>
+            <span class="tag">Insights</span>
+          </div>
+        </a>
+
+        <!-- SunTray -->
+        <a href="https://github.com/Xsixteen/SunTray" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="tools">
+          <div class="card-header">
+            <div class="card-icon tools">🌅</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">SunTray</h3>
+            <p class="card-description">macOS tray application that shows sunrise/sunset times and day length
+              information using the OpenWeather API.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">macOS</span>
+            <span class="tag">Menu Bar</span>
+          </div>
+        </a>
+
+        <!-- Uptime Bar -->
+        <a href="https://github.com/Xsixteen/Uptime-bar" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="tools">
+          <div class="card-header">
+            <div class="card-icon tools">⏱️</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Uptime Bar</h3>
+            <p class="card-description">macOS menu bar agent showing system uptime. Dark mode aware, dock-free,
+              auto-refreshing every 60 seconds.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">macOS</span>
+            <span class="tag">Maven</span>
+          </div>
+        </a>
+
+        <!-- Haus Tools -->
+        <a href="https://github.com/Xsixteen/haus-tools" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="tools">
+          <div class="card-header">
+            <div class="card-icon tools">🏠</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Haus Tools</h3>
+            <p class="card-description">Collection of home utility scripts including a photo organizer with duplicate
+              detection and directory comparison tool.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">CLI</span>
+            <span class="tag">Automation</span>
+          </div>
+        </a>
+
+        <!-- 64BaseX -->
+        <a href="https://github.com/Xsixteen/64BaseX" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="tools">
+          <div class="card-header">
+            <div class="card-icon tools">🔐</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">64BaseX</h3>
+            <p class="card-description">ASCII and binary to Base64 converter. A clean utility for encoding and decoding
+              data.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Encoding</span>
+          </div>
+        </a>
+
+        <!-- RollTool -->
+        <a href="https://github.com/Xsixteen/RollTool" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="tools data">
+          <div class="card-header">
+            <div class="card-icon infra">🚀</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">RollTool</h3>
+            <p class="card-description">Deployment tool for rolling changes to staging and production environments.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Perl</span>
+            <span class="tag">DevOps</span>
+          </div>
+        </a>
+
+        <!-- Obsidian Daily Heatmap -->
+        <a href="https://github.com/Xsixteen/obsidian-daily-heatmap" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="tools creative">
+          <div class="card-header">
+            <div class="card-icon creative">🗓️</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Obsidian Daily Heatmap</h3>
+            <p class="card-description">Obsidian plugin that tracks daily word counts with a GitHub-style heatmap
+              visualization and configurable writing goals.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Obsidian</span>
+            <span class="tag">Plugin</span>
+          </div>
+        </a>
+
+        <!-- Obsidian Releases -->
+        <a href="https://github.com/Xsixteen/obsidian-releases" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="tools">
+          <div class="card-header">
+            <div class="card-icon tools">📦</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Obsidian Releases</h3>
+            <p class="card-description">Community plugins list, theme list, and releases of Obsidian. Fork for
+              contributing to the ecosystem.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Obsidian</span>
+            <span class="tag">Community</span>
+          </div>
+        </a>
+
+        <!-- The Shire Dashboard -->
+        <a href="https://github.com/Xsixteen/the-shire-dashboard" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="iot web">
+          <div class="card-header">
+            <div class="card-icon iot">🏡</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">The Shire Dashboard</h3>
+            <p class="card-description">Home dashboard for tracking metrics and monitoring things around the house.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Dashboard</span>
+            <span class="tag">Smart Home</span>
+          </div>
+        </a>
+
+        <!-- OakPower -->
+        <a href="https://github.com/Xsixteen/OakPower" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="iot">
+          <div class="card-header">
+            <div class="card-icon iot">⚡</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">OakPower</h3>
+            <p class="card-description">Spring REST API that reads from MQTT topics on an energy bridge, exposing
+              real-time power consumption metrics.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring</span>
+            <span class="tag">MQTT</span>
+          </div>
+        </a>
+
+        <!-- OakPi Dashboard -->
+        <a href="https://github.com/Xsixteen/OakPi-Dashboard" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="iot web">
+          <div class="card-header">
+            <div class="card-icon iot">🍇</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">OakPi Dashboard</h3>
+            <p class="card-description">Raspberry Pi-powered dashboard for displaying home metrics and visualizations on
+              a dedicated display.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Raspberry Pi</span>
+          </div>
+        </a>
+
+        <!-- OakWeb Home Dashboard -->
+        <a href="https://github.com/Xsixteen/OakWeb-HomeDashboard" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="iot web">
+          <div class="card-header">
+            <div class="card-icon iot">🌐</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">OakWeb Home Dashboard</h3>
+            <p class="card-description">Web-based dashboard used for displaying home metrics and monitoring household
+              data.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Web</span>
+            <span class="tag">Dashboard</span>
+          </div>
+        </a>
+
+        <!-- Oakshire Backend Service -->
+        <a href="https://github.com/Xsixteen/oakshire-backend-service" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="iot data">
+          <div class="card-header">
+            <div class="card-icon iot">🔧</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Oakshire Backend Service</h3>
+            <p class="card-description">Backend service powering Shire home services — API layer for all smart home
+              integrations.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Backend</span>
+            <span class="tag">API</span>
+          </div>
+        </a>
+
+        <!-- RoyalDashboard -->
+        <a href="https://github.com/Xsixteen/RoyalDashboard" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="iot web">
+          <div class="card-header">
+            <div class="card-icon iot">👑</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">RoyalDashboard</h3>
+            <p class="card-description">Spring & AngularJS dashboard displaying home statistics — power sensors,
+              temperature, and humidity readings.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring</span>
+            <span class="tag">AngularJS</span>
+          </div>
+        </a>
+
+        <!-- ArduinoT -->
+        <a href="https://github.com/Xsixteen/ArduinoT" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="iot">
+          <div class="card-header">
+            <div class="card-icon iot">🌡️</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">ArduinoT</h3>
+            <p class="card-description">Android-connected temperature sensor built with Arduino for real-time
+              environmental monitoring.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">Sensors</span>
+            <span class="tag">Android</span>
+          </div>
+        </a>
+
+        <!-- GateStatusML -->
+        <a href="https://github.com/Xsixteen/GateStatusML" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="ai iot">
+          <div class="card-header">
+            <div class="card-icon ai">🚪</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">GateStatusML</h3>
+            <p class="card-description">Machine learning system for detecting gate status — applying computer vision to
+              home automation.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">ML</span>
+            <span class="tag">Computer Vision</span>
+          </div>
+        </a>
+
+        <!-- GenAI Playground -->
+        <a href="https://github.com/Xsixteen/GenAI-Playground" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="ai">
+          <div class="card-header">
+            <div class="card-icon ai">🤖</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">GenAI Playground</h3>
+            <p class="card-description">Local playground for experimenting with generative AI models, prompts, and
+              techniques.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">GenAI</span>
+            <span class="tag">Experiments</span>
+          </div>
+        </a>
+
+        <!-- CoreNLP -->
+        <a href="https://github.com/Xsixteen/CoreNLP" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="ai data">
+          <div class="card-header">
+            <div class="card-icon ai">🧠</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Stanford CoreNLP</h3>
+            <p class="card-description">Fork of Stanford CoreNLP — a Java suite of core NLP tools for text analysis,
+              sentiment, and entity extraction.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Stanford</span>
+          </div>
+        </a>
+
+        <!-- Game of Life -->
+        <a href="https://github.com/Xsixteen/GameOfLife" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="creative">
+          <div class="card-header">
+            <div class="card-icon creative">🧬</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Game of Life</h3>
+            <p class="card-description">Conway's Game of Life in Java with both console and JavaFX UI drivers for
+              interactive cellular automata simulation.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">JavaFX</span>
+            <span class="tag">Simulation</span>
+          </div>
+        </a>
+
+        <!-- Genesis -->
+        <a href="https://github.com/Xsixteen/Genesis" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="ai creative">
+          <div class="card-header">
+            <div class="card-icon ai">🎯</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Genesis</h3>
+            <p class="card-description">Tic-Tac-Toe game tree analyzer that computes and provides optimal solutions
+              using game theory.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Game Theory</span>
+            <span class="tag">AI</span>
+          </div>
+        </a>
+
+        <!-- Genome -->
+        <a href="https://github.com/Xsixteen/Genome" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="ai creative">
+          <div class="card-header">
+            <div class="card-icon ai">🧪</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Genome</h3>
+            <p class="card-description">Advanced game tree analysis engine for strategic decision-making and move
+              optimization.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Game Trees</span>
+          </div>
+        </a>
+
+        <!-- TetCloneX -->
+        <a href="https://github.com/Xsixteen/TetCloneX" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="creative">
+          <div class="card-header">
+            <div class="card-icon creative">🎮</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">TetCloneX</h3>
+            <p class="card-description">A Tetris clone built in Java — classic arcade gameplay with a custom rendering
+              engine.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Game Dev</span>
+          </div>
+        </a>
+
+        <!-- Quotation of The Day -->
+        <a href="https://github.com/Xsixteen/Quotation-of-The-Day" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="web creative">
+          <div class="card-header">
+            <div class="card-icon creative">💬</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Quotation of The Day</h3>
+            <p class="card-description">Simple web app that displays a fresh inspirational quotation every day.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">Web</span>
+          </div>
+        </a>
+
+        <!-- FuseOS -->
+        <a href="https://github.com/Xsixteen/FuseOS" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="systems">
+          <div class="card-header">
+            <div class="card-icon data">💻</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">FuseOS</h3>
+            <p class="card-description">Operating system implementation from scratch — exploring kernel development,
+              memory management, and bare-metal programming.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">C</span>
+            <span class="tag">OS Dev</span>
+            <span class="tag">Low Level</span>
+          </div>
+        </a>
+
+        <!-- exscapeOS -->
+        <a href="https://github.com/Xsixteen/exscapeOS" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="systems">
+          <div class="card-header">
+            <div class="card-icon data">⚙️</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">exscapeOS</h3>
+            <p class="card-description">Hobby OS written in assembly (NASM) and C. A study in low-level systems with
+              small, realistic goals.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">C</span>
+            <span class="tag">Assembly</span>
+            <span class="tag">OS</span>
+          </div>
+        </a>
+
+        <!-- ProSchedSim -->
+        <a href="https://github.com/Xsixteen/ProSchedSim" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="systems">
+          <div class="card-header">
+            <div class="card-icon data">📋</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">ProSchedSim</h3>
+            <p class="card-description">Process scheduler simulator — implements and visualizes scheduling algorithms
+              like FCFS, SJF, and Round Robin.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">OS Concepts</span>
+          </div>
+        </a>
+
+        <!-- FPGA Asteroids -->
+        <a href="https://github.com/Xsixteen/FPGA-Asteroids" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="systems creative">
+          <div class="card-header">
+            <div class="card-icon data">🎆</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">FPGA Asteroids</h3>
+            <p class="card-description">Asteroids game implemented on an FPGA in VHDL — hardware-level game development
+              with real-time rendering.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">VHDL</span>
+            <span class="tag">FPGA</span>
+            <span class="tag">Hardware</span>
+          </div>
+        </a>
+
+        <!-- HadoopProjects -->
+        <a href="https://github.com/Xsixteen/HadoopProjects" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="data">
+          <div class="card-header">
+            <div class="card-icon data">🐘</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Hadoop Projects</h3>
+            <p class="card-description">Collection of Hadoop-based data processing projects — MapReduce jobs and
+              distributed computing experiments.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Hadoop</span>
+            <span class="tag">Big Data</span>
+          </div>
+        </a>
+
+        <!-- Apache NiFi -->
+        <a href="https://github.com/Xsixteen/nifi" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="data">
+          <div class="card-header">
+            <div class="card-icon data">📡</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Apache NiFi</h3>
+            <p class="card-description">Fork of Apache NiFi — contributing to the data flow automation platform for
+              enterprise pipeline orchestration.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Data Flow</span>
+            <span class="tag">Apache</span>
+          </div>
+        </a>
+
+        <!-- Pal Tracker Distributed -->
+        <a href="https://github.com/Xsixteen/pal-tracker-distributed" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="data web">
+          <div class="card-header">
+            <div class="card-icon infra">☁️</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Pal Tracker Distributed</h3>
+            <p class="card-description">Distributed microservices application — implementing cloud-native patterns with
+              Spring Cloud and service discovery.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">Cloud</span>
+          </div>
+        </a>
+
+        <!-- Spring Boot Angular -->
+        <a href="https://github.com/Xsixteen/spring-boot-angular" target="_blank" rel="noopener"
+          class="project-card reveal" data-category="web">
+          <div class="card-header">
+            <div class="card-icon infra">🍃</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Spring Boot + Angular</h3>
+            <p class="card-description">Full-stack template using Spring Boot with Angular front end — modern tooling
+              via Maven for rapid development.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Angular</span>
+          </div>
+        </a>
+
+        <!-- EricUlicny -->
+        <a href="https://github.com/Xsixteen/EricUlicny" target="_blank" rel="noopener" class="project-card reveal"
+          data-category="web">
+          <div class="card-header">
+            <div class="card-icon creative">🌍</div>
+            <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">EricUlicny.com</h3>
+            <p class="card-description">This very portfolio site — showcasing projects, tech stack, and everything I've
+              built over the years.</p>
+          </div>
+          <div class="card-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Portfolio</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Experience Section ─── -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Experience</span>
+        <h2 class="section-title">Work History</h2>
+        <p class="section-subtitle">A journey through AI architecture, data pipelines, and systems engineering.</p>
+      </div>
+
+      <div class="timeline stagger">
+        <!-- Role 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Senior Solutions Architect - Mach 1 AI/ML</h3>
+              <span class="timeline-company">Ford Motor Company</span>
+              <span class="timeline-date">Oct 2021 - Present</span>
+            </div>
+            <ul class="timeline-list">
+              <li>People leader for the AI/ML Architecture team.</li>
+              <li>Lead Architect supporting Ford's Computer Vision Platform and Gen AI / LLM use-cases.</li>
+              <li>Lead Architect supporting Mach 1 Platform for democratizing AI/ML usage.</li>
+              <li>Created Enterprise documentation to support deployment of Generative AI use-cases.</li>
+              <li>Architected and deployed a Retrieval Augmented Generation (RAG) solution for various Generative AI
+                use-cases.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Big Data and Analytics Architect - GCP</h3>
+              <span class="timeline-company">Ford Motor Company</span>
+              <span class="timeline-date">Apr 2021 - Oct 2021</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Architected Ford's next-generation Google Cloud Platform solution for Global Data Insights and
+                Analytics.</li>
+              <li>Designed integration patterns for streaming and batch data pipelines.</li>
+              <li>Advised product-driven organization (PDO) teams on optimal cost-effective solutions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Senior Engineer - Real Time Streaming Platform</h3>
+              <span class="timeline-company">Ford Motor Company</span>
+              <span class="timeline-date">Jul 2018 - Apr 2021</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Engineered Ford's global Streaming data platform for near real-time analytics.</li>
+              <li>Utilized Apache Kafka, NiFi, HBase, Teradata, Spring Cloud Stream, and Spring Boot.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Software Engineer - Hadoop Specialist</h3>
+              <span class="timeline-company">Ford Motor Company (Connected Vehicle Systems)</span>
+              <span class="timeline-date">May 2015 - Jul 2018</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Designed and delivered software for connected vehicle initiatives.</li>
+              <li>Built pipelines landing streaming IoT data into Hadoop using Apache Storm, Kafka, and NiFi.</li>
+              <li>Developed Java/Spring Boot microservices on Pivotal Cloud Foundry.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 5 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Software Developer (FCG)</h3>
+              <span class="timeline-company">Ford Motor Company (Connected Vehicle Systems)</span>
+              <span class="timeline-date">Aug 2014 - May 2015</span>
+            </div>
+            <ul class="timeline-list">
+              <li>J2EE software development and agile software design for connected vehicle systems.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 6 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Datacenter Facilities Planning & Engineering</h3>
+              <span class="timeline-company">Ford Motor Company</span>
+              <span class="timeline-date">Aug 2013 - Aug 2014</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Researched solutions for datacenter power utilization and planning.</li>
+              <li>Performed Computational Fluid Dynamics modeling using Future Facilities 6-Sigma Software.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 7 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Network Ops Automation & Tools Developer</h3>
+              <span class="timeline-company">Ford Motor Company</span>
+              <span class="timeline-date">Jun 2012 - Aug 2013</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Engineered change management tools and global enterprise network tooling improvements.</li>
+              <li>Created jQuery reusable widget frameworks for network monitoring.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Tech Stack Marquee ─── -->
+  <section class="section" id="tech">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Technologies</span>
+        <h2 class="section-title">Tech I Work With</h2>
+        <p class="section-subtitle">A diverse toolkit spanning languages, frameworks, cloud platforms, and hardware.</p>
+      </div>
+    </div>
+    <div class="tech-marquee">
+      <div class="tech-track" id="tech-track">
+        <div class="tech-item"><span>☕</span> Java</div>
+        <div class="tech-item"><span>🐍</span> Python</div>
+        <div class="tech-item"><span>🔮</span> TypeScript</div>
+        <div class="tech-item"><span>⚛️</span> React</div>
+        <div class="tech-item"><span>🅰️</span> Angular</div>
+        <div class="tech-item"><span>🍃</span> Spring Boot</div>
+        <div class="tech-item"><span>📊</span> Apache NiFi</div>
+        <div class="tech-item"><span>🐘</span> Hadoop</div>
+        <div class="tech-item"><span>📡</span> MQTT</div>
+        <div class="tech-item"><span>🤖</span> Gemini AI</div>
+        <div class="tech-item"><span>🧠</span> Stanford NLP</div>
+        <div class="tech-item"><span>💻</span> C / Assembly</div>
+        <div class="tech-item"><span>🎆</span> VHDL / FPGA</div>
+        <div class="tech-item"><span>🔌</span> Arduino</div>
+        <div class="tech-item"><span>🍇</span> Raspberry Pi</div>
+        <div class="tech-item"><span>📦</span> Maven</div>
+        <div class="tech-item"><span>🎨</span> JavaFX</div>
+        <div class="tech-item"><span>🐙</span> Git</div>
+        <div class="tech-item"><span>🐧</span> Linux</div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="tech-item"><span>☕</span> Java</div>
+        <div class="tech-item"><span>🐍</span> Python</div>
+        <div class="tech-item"><span>🔮</span> TypeScript</div>
+        <div class="tech-item"><span>⚛️</span> React</div>
+        <div class="tech-item"><span>🅰️</span> Angular</div>
+        <div class="tech-item"><span>🍃</span> Spring Boot</div>
+        <div class="tech-item"><span>📊</span> Apache NiFi</div>
+        <div class="tech-item"><span>🐘</span> Hadoop</div>
+        <div class="tech-item"><span>📡</span> MQTT</div>
+        <div class="tech-item"><span>🤖</span> Gemini AI</div>
+        <div class="tech-item"><span>🧠</span> Stanford NLP</div>
+        <div class="tech-item"><span>💻</span> C / Assembly</div>
+        <div class="tech-item"><span>🎆</span> VHDL / FPGA</div>
+        <div class="tech-item"><span>🔌</span> Arduino</div>
+        <div class="tech-item"><span>🍇</span> Raspberry Pi</div>
+        <div class="tech-item"><span>📦</span> Maven</div>
+        <div class="tech-item"><span>🎨</span> JavaFX</div>
+        <div class="tech-item"><span>🐙</span> Git</div>
+        <div class="tech-item"><span>🐧</span> Linux</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── About / Stats Section ─── -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">About</span>
+        <h2 class="section-title">By The Numbers</h2>
+        <p class="section-subtitle">Years of building, shipping, and tinkering across every layer of the stack.</p>
+      </div>
+      <div class="stats-grid stagger">
+        <div class="stat-card reveal">
+          <div class="stat-number">35</div>
+          <div class="stat-label">Public Repositories</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Languages Used</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number">9</div>
+          <div class="stat-label">Domains Explored</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Curiosity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="https://github.com/Xsixteen" target="_blank" rel="noopener">GitHub</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+      </div>
+      <p class="footer-copy">© 2025 Eric Ulicny. Built with care, caffeine, and curiosity.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ===== Scroll-Reveal Observer ===== */
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+    /* ===== Category Filter ===== */
+    const filterBar = document.getElementById("filter-bar");
+    const cards = document.querySelectorAll(".project-card");
+    const countBadge = document.querySelector(".pill-count");
+
+    filterBar.addEventListener("click", (e) => {
+      const pill = e.target.closest(".filter-pill");
+      if (!pill) return;
+
+      filterBar.querySelectorAll(".filter-pill").forEach((p) => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      const filter = pill.dataset.filter;
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const cats = card.dataset.category.split(" ");
+        const show = filter === "all" || cats.includes(filter);
+        card.style.display = show ? "" : "none";
+
+        if (show) {
+          visibleCount++;
+          card.classList.remove("visible");
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              card.classList.add("visible");
+            });
+          });
+        }
+      });
+
+      /* Update count badge on "All" pill */
+      if (countBadge) {
+        countBadge.textContent = filter === "all" ? cards.length : visibleCount;
+      }
+    });
+
+    /* ===== Smooth nav background on scroll ===== */
+    const nav = document.getElementById("nav");
+    const scrollThreshold = 50;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > scrollThreshold) {
+        nav.style.background = "rgba(10, 10, 18, 0.92)";
+      } else {
+        nav.style.background = "rgba(10, 10, 18, 0.7)";
+      }
+    }, { passive: true });
+  </script>
 </body>
+
 </html>
