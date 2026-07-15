@@ -99,7 +99,8 @@
 
       <!-- Filter Pills -->
       <div class="filter-bar reveal" id="filter-bar">
-        <button class="filter-pill active" data-filter="all">All <span class="pill-count">37</span></button>
+        <button class="filter-pill" data-filter="all">All <span class="pill-count">37</span></button>
+        <button class="filter-pill filter-pill--starred active" data-filter="starred">⭐ Starred <span class="pill-count pill-count--starred">7</span></button>
         <button class="filter-pill" data-filter="fintech">Fintech</button>
         <button class="filter-pill" data-filter="tools">Desktop & CLI</button>
         <button class="filter-pill" data-filter="data">Data & Infra</button>
@@ -199,9 +200,10 @@
 
         <!-- SunTray -->
         <a href="https://github.com/Xsixteen/SunTray" target="_blank" rel="noopener" class="project-card reveal"
-          data-category="tools">
+          data-category="tools" data-starred="true">
           <div class="card-header">
             <div class="card-icon tools">🌅</div>
+            <span class="card-star-badge" title="Starred project">⭐</span>
             <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17L17 7M17 7H7M17 7v10" />
@@ -221,9 +223,10 @@
 
         <!-- Uptime Bar -->
         <a href="https://github.com/Xsixteen/Uptime-bar" target="_blank" rel="noopener" class="project-card reveal"
-          data-category="tools">
+          data-category="tools" data-starred="true">
           <div class="card-header">
             <div class="card-icon tools">⏱️</div>
+            <span class="card-star-badge" title="Starred project">⭐</span>
             <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17L17 7M17 7H7M17 7v10" />
@@ -306,9 +309,10 @@
 
         <!-- Obsidian Daily Heatmap -->
         <a href="https://github.com/Xsixteen/obsidian-daily-heatmap" target="_blank" rel="noopener"
-          class="project-card reveal" data-category="tools creative">
+          class="project-card reveal" data-category="tools creative" data-starred="true">
           <div class="card-header">
             <div class="card-icon creative">🗓️</div>
+            <span class="card-star-badge" title="Starred project">⭐</span>
             <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17L17 7M17 7H7M17 7v10" />
@@ -349,9 +353,10 @@
 
         <!-- The Shire Dashboard -->
         <a href="https://github.com/Xsixteen/the-shire-dashboard" target="_blank" rel="noopener"
-          class="project-card reveal" data-category="iot web">
+          class="project-card reveal" data-category="iot web" data-starred="true">
           <div class="card-header">
             <div class="card-icon iot">🏡</div>
+            <span class="card-star-badge" title="Starred project">⭐</span>
             <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17L17 7M17 7H7M17 7v10" />
@@ -669,9 +674,10 @@
 
         <!-- FuseOS -->
         <a href="https://github.com/Xsixteen/FuseOS" target="_blank" rel="noopener" class="project-card reveal"
-          data-category="systems">
+          data-category="systems" data-starred="true">
           <div class="card-header">
             <div class="card-icon data">💻</div>
+            <span class="card-star-badge" title="Starred project">⭐</span>
             <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17L17 7M17 7H7M17 7v10" />
@@ -843,9 +849,10 @@
         </a>
 
         <!-- MegaCrypt -->
-        <div class="project-card reveal" data-category="tools" style="cursor:default;">
+        <div class="project-card reveal" data-category="tools" data-starred="true" style="cursor:default;">
           <div class="card-header">
             <div class="card-icon tools">🔐</div>
+            <span class="card-star-badge" title="Starred project">⭐</span>
             <span class="card-private-badge" style="font-size:11px;color:var(--text-muted,#888);font-weight:600;letter-spacing:.05em;align-self:flex-start;margin-top:2px;">PRIVATE</span>
           </div>
           <div class="card-body">
@@ -861,9 +868,10 @@
         </div>
 
         <!-- PolyWizard -->
-        <div class="project-card reveal" data-category="fintech ai tools" style="cursor:default;">
+        <div class="project-card reveal" data-category="fintech ai tools" data-starred="true" style="cursor:default;">
           <div class="card-header">
             <div class="card-icon fintech">🔮</div>
+            <span class="card-star-badge" title="Starred project">⭐</span>
             <span class="card-private-badge" style="font-size:11px;color:var(--text-muted,#888);font-weight:600;letter-spacing:.05em;align-self:flex-start;margin-top:2px;">PRIVATE</span>
           </div>
           <div class="card-body">
@@ -1170,25 +1178,15 @@
     /* ===== Category Filter ===== */
     const filterBar = document.getElementById("filter-bar");
     const cards = document.querySelectorAll(".project-card");
-    const countBadge = document.querySelector(".pill-count");
 
-    filterBar.addEventListener("click", (e) => {
-      const pill = e.target.closest(".filter-pill");
-      if (!pill) return;
-
-      filterBar.querySelectorAll(".filter-pill").forEach((p) => p.classList.remove("active"));
-      pill.classList.add("active");
-
-      const filter = pill.dataset.filter;
-      let visibleCount = 0;
-
+    function applyFilter(filter) {
       cards.forEach((card) => {
         const cats = card.dataset.category.split(" ");
-        const show = filter === "all" || cats.includes(filter);
+        const isStarred = card.dataset.starred === "true";
+        const show = filter === "all" || (filter === "starred" ? isStarred : cats.includes(filter));
         card.style.display = show ? "" : "none";
 
         if (show) {
-          visibleCount++;
           card.classList.remove("visible");
           requestAnimationFrame(() => {
             requestAnimationFrame(() => {
@@ -1197,11 +1195,19 @@
           });
         }
       });
+    }
 
-      /* Update count badge on "All" pill */
-      if (countBadge) {
-        countBadge.textContent = filter === "all" ? cards.length : visibleCount;
-      }
+    /* Apply starred filter on page load */
+    applyFilter("starred");
+
+    filterBar.addEventListener("click", (e) => {
+      const pill = e.target.closest(".filter-pill");
+      if (!pill) return;
+
+      filterBar.querySelectorAll(".filter-pill").forEach((p) => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      applyFilter(pill.dataset.filter);
     });
 
     /* ===== Smooth nav background on scroll ===== */
