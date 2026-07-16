@@ -8,6 +8,8 @@
   <meta name="description"
     content="Eric Ulicny's portfolio — software engineer building tools for fintech, IoT, data pipelines, and creative tech." />
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./favicon.png" />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,12 +45,12 @@
         Building things that matter
       </div>
       <h1>
-        I build software<br />
+        I build and architect software<br />
         <span class="gradient-text">that solves real problems.</span>
       </h1>
       <p>
-        Software engineer exploring the intersections of fintech, IoT, data engineering, and creative tech.
-        From macOS menu bar utilities to ML-driven stock analysis — I ship things.
+        Software engineer & architect exploring the intersections of fintech, IoT, data engineering, and creative tech.
+        From macOS menu bar utilities to ML-driven stock analysis — I design, build, and ship things.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">
@@ -100,7 +102,8 @@
       <!-- Filter Pills -->
       <div class="filter-bar reveal" id="filter-bar">
         <button class="filter-pill" data-filter="all">All <span class="pill-count">37</span></button>
-        <button class="filter-pill filter-pill--starred active" data-filter="starred">⭐ Starred <span class="pill-count pill-count--starred">7</span></button>
+        <button class="filter-pill filter-pill--starred active" data-filter="starred">⭐ Starred <span
+            class="pill-count pill-count--starred">8</span></button>
         <button class="filter-pill" data-filter="fintech">Fintech</button>
         <button class="filter-pill" data-filter="tools">Desktop & CLI</button>
         <button class="filter-pill" data-filter="data">Data & Infra</button>
@@ -116,9 +119,10 @@
 
         <!-- Stock Analysis Engine -->
         <a href="https://github.com/Xsixteen/Stock-Analysis-Engine" target="_blank" rel="noopener"
-          class="project-card reveal" data-category="fintech ai">
+          class="project-card reveal" data-category="fintech ai" data-starred="true">
           <div class="card-header">
             <div class="card-icon fintech">📊</div>
+            <span class="card-star-badge" title="Starred project">⭐</span>
             <svg class="card-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17L17 7M17 7H7M17 7v10" />
@@ -852,12 +856,16 @@
         <div class="project-card reveal" data-category="tools" data-starred="true" style="cursor:default;">
           <div class="card-header">
             <div class="card-icon tools">🔐</div>
-            <span class="card-star-badge" title="Starred project">⭐</span>
-            <span class="card-private-badge" style="font-size:11px;color:var(--text-muted,#888);font-weight:600;letter-spacing:.05em;align-self:flex-start;margin-top:2px;">PRIVATE</span>
+            <span class="card-star-badge" title="Starred project" style="right: 3.5rem;">⭐</span>
+            <span class="card-private-badge"
+              style="font-size:11px;color:var(--text-muted,#888);font-weight:600;letter-spacing:.05em;align-self:flex-start;margin-top:2px;">PRIVATE</span>
           </div>
           <div class="card-body">
             <h3 class="card-title">MegaCrypt</h3>
-            <p class="card-description">A native macOS password vault built with JavaFX. Encrypts credentials with AES-256 and PBKDF2 key derivation behind a master-password login screen. Features searchable vault, tag chips, one-click copy with 30-second clipboard auto-clear, dark/light theming, and packaged as a standalone macOS .app via Gradle jpackage.</p>
+            <p class="card-description">A native macOS password vault built with JavaFX. Encrypts credentials with
+              AES-256 and PBKDF2 key derivation behind a master-password login screen. Features searchable vault, tag
+              chips, one-click copy with 30-second clipboard auto-clear, dark/light theming, and packaged as a
+              standalone macOS .app via Gradle jpackage.</p>
           </div>
           <div class="card-tags">
             <span class="tag">Java</span>
@@ -871,12 +879,16 @@
         <div class="project-card reveal" data-category="fintech ai tools" data-starred="true" style="cursor:default;">
           <div class="card-header">
             <div class="card-icon fintech">🔮</div>
-            <span class="card-star-badge" title="Starred project">⭐</span>
-            <span class="card-private-badge" style="font-size:11px;color:var(--text-muted,#888);font-weight:600;letter-spacing:.05em;align-self:flex-start;margin-top:2px;">PRIVATE</span>
+            <span class="card-star-badge" title="Starred project" style="right: 3.5rem;">⭐</span>
+            <span class="card-private-badge"
+              style="font-size:11px;color:var(--text-muted,#888);font-weight:600;letter-spacing:.05em;align-self:flex-start;margin-top:2px;">PRIVATE</span>
           </div>
           <div class="card-body">
             <h3 class="card-title">PolyWizard</h3>
-            <p class="card-description">A multi-command Python CLI for Polymarket betting intelligence. Pulls live weather data from Open-Meteo &amp; Wunderground, surfaces temperature and Bitcoin markets with under-15% probability, and pipes opportunities through Gemini AI to score YES/NO bets. Includes a workflow engine for composable task pipelines and full pytest coverage.</p>
+            <p class="card-description">A multi-command Python CLI for Polymarket betting intelligence. Pulls live
+              weather data from Open-Meteo &amp; Wunderground, surfaces temperature and Bitcoin markets with under-15%
+              probability, and pipes opportunities through Gemini AI to score YES/NO bets. Includes a workflow engine
+              for composable task pipelines and full pytest coverage.</p>
           </div>
           <div class="card-tags">
             <span class="tag">Python</span>
